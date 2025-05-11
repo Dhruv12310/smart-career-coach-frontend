@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
@@ -9,12 +11,16 @@ export default function Home() {
         analyze job descriptions, practice mock interviews, and track applications — all in one place.
       </p>
       <div className="flex flex-col sm:flex-row gap-4">
-        <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
-          Get Started
-        </button>
-        <button className="bg-white border border-blue-600 text-blue-600 px-6 py-2 rounded hover:bg-blue-50 transition">
-          Learn More
-        </button>
+        <Link href="/login">
+          <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
+            Get Started
+          </button>
+        </Link>
+        <Link href="/about">
+          <button className="bg-white border border-blue-600 text-blue-600 px-6 py-2 rounded hover:bg-blue-50 transition">
+            Learn More
+          </button>
+        </Link>
       </div>
     </main>
   );
